@@ -35,6 +35,10 @@ function SignUp(props) {
         setSignUpObj((prevState) => ({ ...prevState, mobile: event.target.value }));
     };
 
+    const ChangeLogin = () => {
+        props.ListenToSignup(false)
+    }
+
 
     const OnSubmit = () => {
         let fullNameTest = fullNameRegex.test(SignUpObj.fullName);
@@ -42,11 +46,13 @@ function SignUp(props) {
         let passwordTest = passwordRegex.test(SignUpObj.password);
         let mobileTest = mobileRegex.test(SignUpObj.mobile);
 
+        
+
         if (fullNameTest === false) {
             setRegExObj((prevState) => ({
               ...prevState,
               fullNameBorder: true,
-              fullNameHelper: "enter correct Name",
+              fullNameHelper: "Enter correct Name",
             }));
           } else if (fullNameTest === true) {
             setRegExObj((prevState) => ({
@@ -60,7 +66,7 @@ function SignUp(props) {
           setRegExObj((prevState) => ({
             ...prevState,
             emailBorder: true,
-            emailHelper: "enter correct email",
+            emailHelper: "Enter correct email",
           }));
         } else if (emailTest === true) {
           setRegExObj((prevState) => ({
@@ -73,7 +79,7 @@ function SignUp(props) {
           setRegExObj((prevState) => ({
             ...prevState,
             passwordBorder: true,
-            passwordHelper: "enter correct password",
+            passwordHelper: "Enter correct password",
           }));
         } else if (passwordTest === true) {
           setRegExObj((prevState) => ({
@@ -114,7 +120,7 @@ function SignUp(props) {
                     </div>
                     <div className="logincard">
                         <div className="lgnbtns">
-                            <button className="loginbtn">LOGIN</button>
+                            <button className="registerButton"  onClick={ChangeLogin}>LOGIN</button>
                             <button className="signinbtn">SIGNUP</button>
                         </div>
                         <div className="inputfeilds">

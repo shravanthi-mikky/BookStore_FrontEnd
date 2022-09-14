@@ -59,8 +59,14 @@ function Login(props) {
         }
       };
 
+      const changeSignUp = ()=>{
+        props.ListenToSignup(true)
+    }
+
     return (
         <div className="LoginmainContainer">
+
+            
             <div className="loginContainer">
                 <div className="section">
                     <div className="imgsection">
@@ -72,7 +78,7 @@ function Login(props) {
                     <div className="logincard">
                         <div className="lgnbtns">
                             <button className="loginbtn">LOGIN</button>
-                            <button className="signinbtn" /* onClick={changeSignUp} */>SIGNUP</button>
+                            <button className="signinbtn" onClick={changeSignUp}>SIGNUP</button>
                         </div>
                         <div className="inputfeilds">
                             <label className="emailid">Email Id</label>
@@ -84,7 +90,7 @@ function Login(props) {
                             <label className="frgtpswd">Forgot Password?</label>
                             <button className="lgnbtn" onClick={OnSubmit}>Login</button>
 
-                            <label className="or">OR</label>
+                            <label className="or">------ OR ------<pre>    </pre></label>
 
                         </div>
                         <div className="googlebtn">
