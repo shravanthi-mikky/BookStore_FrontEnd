@@ -4,6 +4,8 @@ import Login from './Pages/Login/Login.jsx'
 import SignUp from './Pages/SignUp/SignUp';
 import DashBoard from './Pages/DashBoard/DashBoard';
 import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import Home from './Components/Home/Home';
 
 function App() {
   return (
@@ -11,8 +13,9 @@ function App() {
       {/* <Login/> */}
      {/*  <SignUp/> */}
      {/* <DashBoard/> */}
-     <Header/>
-      
+     {/* <Header/> */}
+      {/* <Footer/> */}
+      <Home/>
     </div>
   );
 }
