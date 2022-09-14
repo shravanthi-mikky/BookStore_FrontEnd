@@ -23,8 +23,9 @@
 }
 .searchBar{
     width:80%;
-    height:80%;
-    border:none;
+    height:100%;
+    border:white;
+    height:5vh;
 }
 .search-icon{
     padding:0.4rem;
