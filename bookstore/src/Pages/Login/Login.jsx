@@ -2,6 +2,7 @@ import React from 'react'
 import TextField from '@mui/material/TextField'
 import OnlineShoppingPicture from '../../Assets/OnlineShoppingPicture.png'
 import './Login.css'
+import { signIn } from '../../Services/userServices';
 
 const emailRegex = /^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
@@ -55,7 +56,7 @@ function Login(props) {
         }
     
         if (emailTest === true && passwordTest === true) {
-            console.log("hitt the server");
+          signIn(LoginObj).then((response)=>{console.log(response); localStorage.setItem("token",response.data.token)}).catch((error)=>{console.log(error)});;
         }
       };
 
@@ -78,7 +79,7 @@ function Login(props) {
                     <div className="logincard">
                         <div className="lgnbtns">
                             <button className="loginbtn">LOGIN</button>
-                            <button className="signinbtn" onClick={changeSignUp}>SIGNUP</button>
+                            <button className="signinbtn" onClick={changeSignUp} style={{ color:"grey"}}>SIGNUP</button>
                         </div>
                         <div className="inputfeilds">
                             <label className="emailid">Email Id</label>

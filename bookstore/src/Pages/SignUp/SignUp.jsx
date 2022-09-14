@@ -2,6 +2,7 @@ import React from 'react'
 import TextField from '@mui/material/TextField'
 import OnlineShoppingPicture from '../../Assets/OnlineShoppingPicture.png'
 import './SignUp.css'
+import { signUp } from '../../Services/userServices';
 
 const fullNameRegex = /^[A-Z]{1}[a-z]{2,}$/;
 const emailRegex =/^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$/;
@@ -11,6 +12,13 @@ const mobileRegex =/^[6-9]{2}[0-9]{8}/;
 function SignUp(props) {
 
     const [SignUpObj, setSignUpObj] = React.useState({ fullName:"", email: "", password: "", mobile:"" });
+
+    let obj = {
+      fullName : SignUpObj.fullName,
+      email : SignUpObj.email,
+      password: SignUpObj.password,
+      mobile : SignUpObj.mobile
+      }
     const [regexObj, setRegExObj] = React.useState({
         fullNameBorder: false,
         emailBorder: false,
@@ -103,8 +111,8 @@ function SignUp(props) {
             }));
           }
     
-        if (fullNameTest === true && emailTest === true && passwordTest === true && mobileTest === true) {
-            console.log("hitt the server");
+        if (/* fullNameTest === true && */ emailTest === true && passwordTest === true /* && mobileTest === true */) {
+          signUp(SignUpObj).then((response)=>{console.log(response)}).catch((error)=>{console.log(error)});
         }
       };
 
