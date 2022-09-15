@@ -7,7 +7,7 @@ import { signUp } from '../../Services/userServices';
 const fullNameRegex = /^[A-Z]{1}[a-z]{2,}$/;
 const emailRegex =/^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$/;
 const passwordRegex =/^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
-const mobileRegex =/^[6-9]{2}[0-9]{8}/;
+const mobileRegex =/^[6-9]{1}[0-9]{9}/;
 
 function SignUp(props) {
 

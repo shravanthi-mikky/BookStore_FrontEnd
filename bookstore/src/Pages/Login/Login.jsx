@@ -56,7 +56,7 @@ function Login(props) {
         }
     
         if (emailTest === true && passwordTest === true) {
-          signIn(LoginObj).then((response)=>{console.log(response); localStorage.setItem("token",response.data.token)}).catch((error)=>{console.log(error)});;
+          signIn(LoginObj).then((response)=>{console.log(response); localStorage.setItem("token",response.data.data)}).catch((error)=>{console.log(error)});;
         }
       };
 

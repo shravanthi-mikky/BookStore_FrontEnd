@@ -6,6 +6,8 @@ import DashBoard from './Pages/DashBoard/DashBoard';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
+import Book from './Components/Book/Book';
+import Cart from './Components/Cart/Cart';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
      {/* <DashBoard/> */}
      {/* <Header/> */}
       {/* <Footer/> */}
-      <Home/>
+      {/* <Home/> */}
+      {/* <Book/> */}
+      <Cart/>
     </div>
   );
 }
