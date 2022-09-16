@@ -6,6 +6,7 @@
     width:100vw;
     height:9vh;
     background-color: #2E1D1E;
-    margin-top: 80vh;
+    position:absolute;
+    margin-top: 10vh;
     color:white;
 }

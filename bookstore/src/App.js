@@ -8,6 +8,10 @@ import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import Book from './Components/Book/Book';
 import Cart from './Components/Cart/Cart';
+import Router from './Router/Router';
+import RouterComponent from './Router/Router';
+import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
+import BookView from './Components/BookView/BookView';
 
 function App() {
   return (
@@ -19,7 +23,10 @@ function App() {
       {/* <Footer/> */}
       {/* <Home/> */}
       {/* <Book/> */}
-      <Cart/>
+      {/* <Cart/> */}
+      {/* <RouterComponent/> */}
+      {/* <ForgotPassword/> */}
+      <BookView/>
     </div>
   );
 }
