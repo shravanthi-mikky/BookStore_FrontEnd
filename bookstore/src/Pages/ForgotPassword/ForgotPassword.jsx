@@ -4,7 +4,6 @@ import './ForgotPassword.css'
 function ForgotPassword() {
     return (
         <div className='forgotPasswordMainDiv'>
-
             <div className='forgotPasswordSecondDiv'>
                 <div className='BookImagePart1'>
                     <img className='imageOfBookStore' src='WhiteBookImage.png' width='30' />

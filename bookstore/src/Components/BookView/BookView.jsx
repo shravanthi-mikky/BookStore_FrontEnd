@@ -95,16 +95,6 @@ function BookView() {
 
                     </div>
                     <div className="CartWishlist">
-                        {/* {
-                    (getcartid.length!==0) ? (
-                        <div className="addcart">
-                            <div className="minus" onClick={decrement}>-</div>
-                            <div className="itemss">{{quantity}}12</div>
-                            <div className="plus" onClick={increment}>+</div>
-        
-                        </div>) :  <button className="Addtobag" onClick={getProductId}>ADD TO BAG</button>
-
-                } */}
 
 
                         <button className="wishlist" /* id={props.booklist._id} onClick={wishlist} */>WISHLIST</button>
@@ -118,7 +108,7 @@ function BookView() {
                         <p className="qnty">{/* ({props.booklist.quantity}) */}qty</p>
                     </div>
                     <div className="prcediv">
-                        <h2 className="prce">{/* Rs.{props.booklist.price} */}price</h2>
+                        <h3 className="prce">Rs.{/* {props.booklist.price} */}600</h3>
                         <p className="dscntprce">Rs.{/* {props.booklist.discountPrice} */}dis</p>
                     </div>
                     <hr />
