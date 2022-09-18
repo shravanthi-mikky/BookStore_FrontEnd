@@ -2,15 +2,23 @@ import React from 'react'
 import TextField from '@mui/material/TextField'
 import OnlineShoppingPicture from '../../Assets/OnlineShoppingPicture.png'
 import './SignUp.css'
+import { signUp } from '../../Services/userServices';
 
 const fullNameRegex = /^[A-Z]{1}[a-z]{2,}$/;
 const emailRegex =/^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$/;
 const passwordRegex =/^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
-const mobileRegex =/^[6-9]{2}[0-9]{8}/;
+const mobileRegex =/^[6-9]{1}[0-9]{9}/;
 
 function SignUp(props) {
 
     const [SignUpObj, setSignUpObj] = React.useState({ fullName:"", email: "", password: "", mobile:"" });
+
+    let obj = {
+      fullName : SignUpObj.fullName,
+      email : SignUpObj.email,
+      password: SignUpObj.password,
+      mobile : SignUpObj.mobile
+      }
     const [regexObj, setRegExObj] = React.useState({
         fullNameBorder: false,
         emailBorder: false,
@@ -35,6 +43,10 @@ function SignUp(props) {
         setSignUpObj((prevState) => ({ ...prevState, mobile: event.target.value }));
     };
 
+    const ChangeLogin = () => {
+        props.ListenToSignup(false)
+    }
+
 
     const OnSubmit = () => {
         let fullNameTest = fullNameRegex.test(SignUpObj.fullName);
@@ -42,11 +54,13 @@ function SignUp(props) {
         let passwordTest = passwordRegex.test(SignUpObj.password);
         let mobileTest = mobileRegex.test(SignUpObj.mobile);
 
+        
+
         if (fullNameTest === false) {
             setRegExObj((prevState) => ({
               ...prevState,
               fullNameBorder: true,
-              fullNameHelper: "enter correct Name",
+              fullNameHelper: "Enter correct Name",
             }));
           } else if (fullNameTest === true) {
             setRegExObj((prevState) => ({
@@ -60,7 +74,7 @@ function SignUp(props) {
           setRegExObj((prevState) => ({
             ...prevState,
             emailBorder: true,
-            emailHelper: "enter correct email",
+            emailHelper: "Enter correct email",
           }));
         } else if (emailTest === true) {
           setRegExObj((prevState) => ({
@@ -73,7 +87,7 @@ function SignUp(props) {
           setRegExObj((prevState) => ({
             ...prevState,
             passwordBorder: true,
-            passwordHelper: "enter correct password",
+            passwordHelper: "Enter correct password",
           }));
         } else if (passwordTest === true) {
           setRegExObj((prevState) => ({
@@ -97,8 +111,8 @@ function SignUp(props) {
             }));
           }
     
-        if (fullNameTest === true && emailTest === true && passwordTest === true && mobileTest === true) {
-            console.log("hitt the server");
+        if (/* fullNameTest === true && */ emailTest === true && passwordTest === true /* && mobileTest === true */) {
+          signUp(SignUpObj).then((response)=>{console.log(response)}).catch((error)=>{console.log(error)});
         }
       };
 
@@ -114,7 +128,7 @@ function SignUp(props) {
                     </div>
                     <div className="logincard">
                         <div className="lgnbtns">
-                            <button className="loginbtn">LOGIN</button>
+                            <button className="registerButton"  onClick={ChangeLogin}>LOGIN</button>
                             <button className="signinbtn">SIGNUP</button>
                         </div>
                         <div className="inputfeilds">
