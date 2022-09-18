@@ -4,6 +4,7 @@ import OnlineShoppingPicture from '../../Assets/OnlineShoppingPicture.png'
 import './Login.css'
 import { signIn } from '../../Services/userServices';
 import { useNavigate } from 'react-router-dom';
+import { Forgot } from '../../Services/dataServices';
 
 const emailRegex = /^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
@@ -20,6 +21,7 @@ function Login(props) {
   });
 
   const ForgotMethod = () =>{
+    //Forgot().then((response) => { console.log(response); navigate('/ForgotPassword') }).catch((error) => { console.log(error) });
     navigate('/ForgotPassword')
   }
 
@@ -97,7 +99,7 @@ function Login(props) {
               <label className="frgtpswd" onClick={ForgotMethod}>Forgot Password?</label>
               <button className="lgnbtn" onClick={OnSubmit}>Login</button>
 
-              <label className="or">------ OR ------<pre>    </pre></label>
+              <label className="or">------ OR ------</label>
 
             </div>
             <div className="googlebtn">

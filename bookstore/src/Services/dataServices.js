@@ -6,13 +6,17 @@ let headersConfig = {
     } 
 }
 
-export const Forgot = () => {
-    let response = axios.post("https://localhost:44318/api/User/ForgetPassword",headersConfig)
+export const Forgot = (obj) => {
+    let response = axios.post(`https://localhost:44318/api/User/ForgetPassword?email=${obj.email}`,obj)
     return response
 }
 
+//https://localhost:44318/api/User/Reset?email=xyz%40gmail.com&newpassword=abc&confirmpassword=pqr
+
+
+
 export const Reset = (obj) => {
-    let response = axios.post("https://localhost:44318/api/User/Reset",obj,headersConfig)
+    let response = axios.post(`https://localhost:44318/api/User/Reset?email=${obj.email}&newpassword=${obj.newpassword}&confirmpassword=${obj.confirmpassword}`,obj,headersConfig)
     return response
 }
 

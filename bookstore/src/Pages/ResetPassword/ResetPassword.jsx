@@ -8,19 +8,22 @@ import { useNavigate } from 'react-router-dom';
 
 function ResetPassword() {
     const navigate1 = useNavigate();
-    const [passwordObj, setPasswordObj] = React.useState({ newpassword: "", confirmpassword: "" })
+    const [passwordObj, setPasswordObj] = React.useState({email:"", newpassword: "", confirmpassword: "" })
+
+    const takeEmail = (event) => {
+        setPasswordObj((prevState) => ({ ...prevState, email: event.target.value }));
+      };
 
     const takePassword = (event) => {
         setPasswordObj((prevState) => ({ ...prevState, newpassword: event.target.value }));
     };
     const takeConfirm = (event) => {
-        setPasswordObj((prevState) => ({ ...prevState, confirmpassword: event.target.value }));
+        setPasswordObj((prevState) => ({...prevState, confirmpassword: event.target.value }));
 
     };
 
     const next = async () => {
-        Reset(passwordObj).then((response) => { console.log(response);console.log("Password reset successfully");  /* navigate1('/Home') */ }).catch((error) => { console.log(error) });
-         
+        Reset(passwordObj).then((response) => {console.log(response);console.log("Password reset successfully");  navigate1('/Home') }).catch((error) => { console.log(error) });   
     }
 
     return (
@@ -42,6 +45,7 @@ function ResetPassword() {
                             variant="outlined"
                             type='email'
                             size='small'
+                            onChange={takeEmail}
                             fullWidth />
                     </div>
                     <div className='passfp'>

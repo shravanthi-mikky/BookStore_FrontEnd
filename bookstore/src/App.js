@@ -25,10 +25,10 @@ function App() {
       {/* <Home/> */}
       {/* <Book/> */}
       {/* <Cart/> */}
-      {/* <RouterComponent/> */}
+      <RouterComponent/>
       {/* <ForgotPassword/> */}
       {/* <BookView/> */}
-      <ResetPassword/>
+      {/* <ResetPassword/> */}
     </div>
   );
 }
