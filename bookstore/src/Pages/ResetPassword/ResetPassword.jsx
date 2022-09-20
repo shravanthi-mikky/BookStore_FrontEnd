@@ -23,7 +23,7 @@ function ResetPassword() {
     };
 
     const next = async () => {
-        Reset(passwordObj).then((response) => {console.log(response);console.log("Password reset successfully");  navigate1('/Home') }).catch((error) => { console.log(error) });   
+        Reset(passwordObj).then((response) => {console.log(response);console.log("Password reset successfully");  navigate1('/') }).catch((error) => { console.log(error) });   
     }
 
     return (

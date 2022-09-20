@@ -25,7 +25,6 @@
 .bkimg {
     width: 250px;
     height: 275px;
-    /* border: 2px solid green; */
 }
 
 .bkimg img {
@@ -103,7 +102,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 0px;
+    margin: 10px 0 10px 0;
 }
 
 .rtngbtn {
@@ -157,6 +156,7 @@
 
 hr {
     width: 650px;
+    /* padding:10px; */
 }
 
 .bookdetails {
@@ -165,8 +165,7 @@ hr {
     justify-content: flex-start;
     font: normal normal normal 18px/21px Roboto;
     color: #878787;
-    margin-bottom: 0px;
-    opacity: 1;
+    margin-top:10px;
 }
 
 .para {
@@ -229,6 +228,7 @@ hr {
     height: 24px;
     font: normal normal normal 18px/24px Roboto;
     letter-spacing: 0px;
+    margin-top:10px;
 }
 
 .overallrating {
@@ -248,7 +248,7 @@ hr {
     width: 70px;
     height: 8px;
     margin-left: 17px;
-    margin-bottom: 0px;
+    margin: 10px 10px 10px 10px;
     font: normal normal normal 12px/16px Roboto;
     letter-spacing: 0px;
     color: #0A0102;
@@ -284,20 +284,6 @@ hr {
     height: 100px;
     margin-top: 15px;
 }
-
-.oneratingh {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 79px;
-    margin-top: 0px;
-    margin-left: 17px;
-    margin-bottom: 0px;
-    font: normal normal normal 15px/20px Roboto;
-    letter-spacing: 0px;
-    color: #0A0102;
-}
-
 .stars {
     display: flex;
     flex-direction: row;
@@ -306,39 +292,17 @@ hr {
     margin-left: 17px;
 }
 
-.oneratingpara {
-    width: 516px;
-    height: 40px;
-    margin-left: 17px;
-    font: normal normal normal 12px/16px Roboto;
-    letter-spacing: 0px;
-    color: #707070;
-    text-align: justify;
-}
-
 .submits {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 80px;
-    height: 25px;
+    height: 40px;
     background: #3371B5 0% 0% no-repeat padding-box;
     border-radius: 3px;
-    margin-top: 30px;
     margin-left: 450px;
     border: none;
     outline: none;
     align-items: center;
     color: #FFFFFF;
-}
-
-.footerComponentBV {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 9vh;
-    background-color: #2E1D1E;
-    color: white;
 }

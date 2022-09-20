@@ -4,16 +4,15 @@ import './Book.css'
 function Book(props) {
     const Showbookdata = (data) => {
         console.log("singlebook", data)
-        props.ListenToBookList(data)
-        props.ListentoSwitchbook(true);
-
+        props.ListenToBookList()
+        props.ListenToEachBook(data);
     }
     return (
         <div className="booklist">
-            <div className="book" /* onClick={() => Showbookdata(props.book)} */>
+            <div className="book" >
                 <div className="bookimg">
                     <div className="images">
-                        <img  src={props.book.bookImage} alt="book" />
+                        <img  src={props.book.bookImage} alt="book" onClick={() => Showbookdata(props.book)}/>
                     </div>
                 </div>
                 <div className="booknames">
