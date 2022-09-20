@@ -2,18 +2,26 @@ import React from 'react'
 import './Header.css'
 import SearchIcon from '@mui/icons-material/Search';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import { useNavigate } from 'react-router-dom';
+import Cart from '../Cart/Cart';
 
 
 function Header() {
+    /* const navigate3=useNavigate();
+    const openCart = () => {
+        navigate3('/Cart')
+    } */
+
     return (
-        <div class='mainOfHeader'>
-            <div class='headerOfMainPage'>
+        
+        <div className='mainOfHeader'>
+            <div className='headerOfMainPage'>
                 <div className='BookImagePart'>
                     <img className='imageOfBookStore' src='WhiteBookImage.png' /* width='30' */ />
                     <p className='paraOfBookStore'>Bookstore</p>
                 </div>
                 <div className='HomePageSearch'>
-                    <div class='search-icon'><SearchIcon /></div>
+                    <div className='search-icon'><SearchIcon /></div>
                     <input placeholder="Search" class='searchBar'></input>
                 </div>
                 <div className="HomePageProfileAndCartIcon">
@@ -23,7 +31,9 @@ function Header() {
                     </div>
                     <div className='pAndC'>
                         <img className='cartImage' src='CartImage.png' width='20' />
-                        <p style={{ color: "white",fontSize:"small" }}>Cart</p>
+                        <p style={{ color: "white",fontSize:"small" }}  /* onClick={openCart} */> 
+                        Cart
+                        </p>
                     </div>
                 </div>
             </div>

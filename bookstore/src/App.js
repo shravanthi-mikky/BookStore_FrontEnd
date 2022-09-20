@@ -20,14 +20,14 @@ function App() {
       {/* <Login/> */}
      {/*  <SignUp/> */}
      {/* <DashBoard/> */}
-     {/* <Header/> */}
+    {/*  <Header/> */}
       {/* <Footer/> */}
       {/* <Home/> */}
       {/* <Book/> */}
       {/* <Cart/> */}
       <RouterComponent/>
       {/* <ForgotPassword/> */}
-      {/* <BookView/> */}
+     {/*  <BookView/> */}
       {/* <ResetPassword/> */}
     </div>
   );
