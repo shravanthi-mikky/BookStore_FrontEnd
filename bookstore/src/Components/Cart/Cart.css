@@ -138,19 +138,3 @@
     align-items: center;
 
 }
-.PlaceOrder {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 160px;
-    height: 35px;
-    background: #3371B5 0% 0% no-repeat padding-box;
-    border-radius: 3px;
-    margin-left: 584px;
-    outline: none;
-    border: none;
-    color: #FFFFFF;
-    align-items: center;
-    margin-top:8rem;
-
-}

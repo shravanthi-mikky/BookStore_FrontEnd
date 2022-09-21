@@ -13,6 +13,9 @@ import RouterComponent from './Router/Router';
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 import BookView from './Components/BookView/BookView';
 import ResetPassword from './Pages/ResetPassword/ResetPassword';
+import CustomerDetails from './Components/CustomerDetails/CustomerDetails';
+import OrderSummary from './Components/OrderSummary/OrderSummary';
+import GetCartPage from './Components/GetCartPage/GetCartPage';
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
       {/* <ForgotPassword/> */}
      {/*  <BookView/> */}
       {/* <ResetPassword/> */}
+      {/* <CustomerDetails/> */}
+      {/* <OrderSummary/> */}
+      {/* <GetCartPage/> */}
     </div>
   );
 }

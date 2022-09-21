@@ -28,12 +28,19 @@ export const getAllBooks = () => {
 
 export const getCart = () => {
     /* console.log(headersConfig) */
-    let response = axios.get("https://localhost:44318/api/Cart/Get?userid=1",headersConfig)
+    let response = axios.get("https://localhost:44318/api/Cart/GetAllCart",headersConfig)
     return response
 }
 
 export const getBookbyid = (obj) => {
     console.log(headersConfig)
     let response = axios.get(`https://localhost:44318/api/Book/GetBookByBookId?bookid=${obj.bookId}`,obj,headersConfig)
+    return response
+}
+
+
+export const addtoCart = () => {
+    /* console.log(headersConfig) */
+    let response = axios.post("https://localhost:44318/api/Cart/Add",headersConfig)
     return response
 }

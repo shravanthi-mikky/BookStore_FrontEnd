@@ -2,9 +2,17 @@ import React from 'react'
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import './BookView.css'
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import RemoveCircleOutlineOutlinedIcon from '@mui/icons-material/RemoveCircleOutlineOutlined';
+import { addtoCart } from '../../Services/dataServices';
 
 function BookView(props) {
+    const [cartObj,setCartObj] = React.useState({userid:1,bookId:1,cartId:1})
+    
 
+    const addToCart = (cartObj) => {
+        addtoCart(cartObj)
+    }
     return (
         <div className="BookImage">
             <div className='MiddleOfBookView'>
@@ -15,7 +23,7 @@ function BookView(props) {
                         </div>
                     </div>
                     <div className="CartWishlist">
-                        <button className="wishlist"  style={{backgroundColor:"#A03037"}}/* id={props.booklist.bookId} onClick={cart} */>ADD TO BAG</button>
+                        <button className="wishlist" style={{ backgroundColor: "#A03037" }} id={props.selectBook.bookId}  /* onClick={addToCart} */>ADD TO BAG</button>
                         <button className="wishlist" /* id={props.booklist.bookId} onClick={wishlist} */>WISHLIST</button>
                     </div>
                 </div>

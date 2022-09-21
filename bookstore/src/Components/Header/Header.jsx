@@ -7,10 +7,11 @@ import Cart from '../Cart/Cart';
 
 
 function Header() {
-    /* const navigate3=useNavigate();
+    const navigate3=useNavigate();
+    
     const openCart = () => {
         navigate3('/Cart')
-    } */
+    }
 
     return (
         
@@ -31,7 +32,7 @@ function Header() {
                     </div>
                     <div className='pAndC'>
                         <img className='cartImage' src='CartImage.png' width='20' />
-                        <p style={{ color: "white",fontSize:"small" }}  /* onClick={openCart} */> 
+                        <p style={{ color: "white",fontSize:"small" }}  onClick={openCart}> 
                         Cart
                         </p>
                     </div>
