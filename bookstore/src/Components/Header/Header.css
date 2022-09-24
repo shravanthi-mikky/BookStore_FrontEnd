@@ -1,3 +1,10 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
 .mainOfHeader{
     width:100vw;
     height:9vh;
@@ -12,14 +19,14 @@
 .HomePageSearch{
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     width:41vw;
     height:90%;
     border-radius:4px;
     background-color: white;
     margin-top: 0.4rem;
-    margin-left: -5rem;
+    /* margin-left: -5rem; */
 }
 .searchBar{
     width:80%;
@@ -50,6 +57,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 4rem;
+    margin-left: 2rem;
     margin-top: 0.4rem;
 }

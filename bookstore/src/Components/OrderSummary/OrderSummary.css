@@ -1,9 +1,10 @@
 .orderSummery-container{
     border: 1px solid rgb(92, 87, 87);
     width: 55vw;
-    height: 30vh;
+    height: 240px;
     display: flex;
     flex-direction: column;
+    margin-top:20px;
     /* justify-content: space-around; */
     /* font-family:'Times New Roman', Times, serif; */
     font: normal normal normal 14px/17px Lato;

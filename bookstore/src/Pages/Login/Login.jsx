@@ -5,6 +5,7 @@ import './Login.css'
 import { signIn } from '../../Services/userServices';
 import { useNavigate } from 'react-router-dom';
 import { Forgot } from '../../Services/dataServices';
+import { textAlign } from '@mui/system';
 
 const emailRegex = /^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
@@ -99,7 +100,7 @@ function Login(props) {
               <label className="frgtpswd" onClick={ForgotMethod}>Forgot Password?</label>
               <button className="lgnbtn" onClick={OnSubmit}>Login</button>
 
-              <label className="or">------ OR ------</label>
+              <label className="or" style={{display:"flex",marginLeft:"4rem"}}>------ OR ------</label>
 
             </div>
             <div className="googlebtn">

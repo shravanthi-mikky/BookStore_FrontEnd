@@ -4,15 +4,23 @@ import Header from '../Header/Header'
 import './BookView.css'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineOutlinedIcon from '@mui/icons-material/RemoveCircleOutlineOutlined';
-import { addtoCart } from '../../Services/dataServices';
+import { addtoCart, addtoWishList } from '../../Services/dataServices';
 
 function BookView(props) {
-    const [cartObj,setCartObj] = React.useState({userid:1,bookId:1,cartId:1})
     
+    const cartObj= {userId:1,bookId:Number(props.selectBook.bookId),quantity:Number(props.selectBook.bookCount)}
+    const WishLObj = {userId:1,bookId:Number(props.selectBook.bookId)}
 
-    const addToCart = (cartObj) => {
+    const addToCart = () => {
         addtoCart(cartObj)
+        alert("Book addded to Cart")
     }
+
+    const addToWishlist = () => {
+        addtoWishList(WishLObj)
+        alert("Book added to WishList")
+    }
+
     return (
         <div className="BookImage">
             <div className='MiddleOfBookView'>
@@ -23,8 +31,8 @@ function BookView(props) {
                         </div>
                     </div>
                     <div className="CartWishlist">
-                        <button className="wishlist" style={{ backgroundColor: "#A03037" }} id={props.selectBook.bookId}  /* onClick={addToCart} */>ADD TO BAG</button>
-                        <button className="wishlist" /* id={props.booklist.bookId} onClick={wishlist} */>WISHLIST</button>
+                        <button className="wishlist" style={{ backgroundColor: "#A03037" }}  onClick={addToCart}>ADD TO BAG</button>
+                        <button className="wishlist" onClick={addToWishlist}>WISHLIST</button>
                     </div>
                 </div>
                 <div className="bkname">
@@ -55,6 +63,8 @@ function BookView(props) {
                             <span style={{ fontSize: "20px", marginRight: "15px" }}>&#9734;</span>
                         </div>
                         <input type="text" className="reviewinput" placeholder="write your review" />
+
+                        {console.log(cartObj)}
                         <button className="submits">SUBMIT</button>
                     </div>
                 </div>

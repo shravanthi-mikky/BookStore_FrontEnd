@@ -6,9 +6,11 @@ import Header from '../Header/Header'
 import OrderSummary from '../OrderSummary/OrderSummary'
 import './Cart.css'
 import { getCart } from '../../Services/dataServices'
+import InCartItem from '../InCartItem/InCartItem'
 
 
 function Cart() {
+    const [view2, setView2] = React.useState(true)
     const [cartitems, setcartitems] = React.useState([])
     const [view, setView] = React.useState(true);
     const [view1, setView1] = React.useState(true);
@@ -18,14 +20,9 @@ function Cart() {
         getCart()
             .then((response) => {
                 console.log(response)
-                /* let filter = []
-                filter = response.data.data.filter(function (book) {
-                    if (props.cart.bookId.cartId === book.bookId.cartId)
-                        setQuantity(book.Book_Quantity)
-                    return book
-                }) */
                 setAddCart(response.data.response)
                 console.log("CartItems from Set Cart", addCart)
+                console.log(response.data.response.cartId)
             })
             .catch((error) => {
                 console.log(error)
@@ -44,6 +41,16 @@ function Cart() {
         setView1(false)
     }
 
+    const ListenToCartList = () => {
+        setView2(false)
+    }
+    const ListenToEachCartItem = (data) => {
+        setcartitems(data)
+    }
+
+    const CartArray = addCart.map((item) =>
+    (<GetCartPage item={item} ListenToCartList={ListenToCartList} ListenToEachCartItem={ListenToEachCartItem}/>))
+
     return (
         <div>
             <Header />
@@ -57,25 +64,28 @@ function Cart() {
                             <h5 className="currnth">Use Current location</h5>
                         </div>
                     </div>
-                    {addCart.map((item) =>
-                        <GetCartPage item={item} /* ListenToRemove={ListenToRemove} */ />)
+                    {
+                        view2 ? 
+                        CartArray : 
+                        <InCartItem cartitems={cartitems}/>
+                        
                     }
-                    {/* <button className="PlaceOrder">Place Order</button> */}
-                </div>
 
+                    {/* {CartArray} */}
+                    
+                </div>
 
                 {view ?
                     <div className="Addressdetais">
                         <p className="add" onClick={onAddressClick} >Address Details</p>
                     </div>
                     : <CustomerDetails />}
-                {/*<p className="add">Address Details</p>*/}
 
                 {view1 ?
                     <div className="ordersummary">
-                    <p className="ordersum" onClick={OrderClick} >Order Summary </p>
-                </div>
-                    : <OrderSummary/>}
+                        <p className="ordersum" onClick={OrderClick} >Order Summary </p>
+                    </div>
+                    : <OrderSummary cartitems={cartitems}/>}
             </div>
             <Footer />
         </div>

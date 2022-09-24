@@ -28,10 +28,11 @@ export const getAllBooks = () => {
 
 export const getCart = () => {
     /* console.log(headersConfig) */
-    let response = axios.get("https://localhost:44318/api/Cart/GetAllCart",headersConfig)
+    let response = axios.get("https://localhost:44318/api/Cart/GetAllCartItems",headersConfig)
     return response
 }
 
+//not used
 export const getBookbyid = (obj) => {
     console.log(headersConfig)
     let response = axios.get(`https://localhost:44318/api/Book/GetBookByBookId?bookid=${obj.bookId}`,obj,headersConfig)
@@ -39,8 +40,33 @@ export const getBookbyid = (obj) => {
 }
 
 
-export const addtoCart = () => {
+export const addtoCart = (obj) => {
     /* console.log(headersConfig) */
-    let response = axios.post("https://localhost:44318/api/Cart/Add",headersConfig)
+    let response = axios.post("https://localhost:44318/api/Cart/Add",obj,headersConfig)
+    return response
+}
+
+export const addtoWishList = (obj) => {
+    let response = axios.post("https://localhost:44318/WishList/AddWishList",obj,headersConfig)
+    return response
+}
+
+
+export const getAllWishList = () => {
+    /* console.log(headersConfig) */
+    let response = axios.get("https://localhost:44318/WishList/GetWishList",headersConfig)
+    return response
+}
+
+//not used
+export const DeleteWishList = (obj) => {
+    /* console.log(headersConfig) */
+    let response = axios.delete(`https://localhost:44318/WishList/DeleteWishList?WishListId=${obj.wishListId}&UserId=${obj.userId}`,obj,headersConfig)
+    return response
+}
+
+export const DeleteWishList1 = () => {
+    /* console.log(headersConfig) */
+    let response = axios.delete("https://localhost:44318/WishList/DeleteWishList1",headersConfig)
     return response
 }
