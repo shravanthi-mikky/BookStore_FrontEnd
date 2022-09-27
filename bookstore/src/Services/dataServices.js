@@ -84,3 +84,13 @@ export const addFeedBack = (obj) => {
     let response = axios.post("https://localhost:44318/Feedback/Add",obj,headersConfig)
     return response
 }
+
+export const getAddress = () => {
+    let response = axios.get("https://localhost:44318/api/Address/GetAllUersAddress",headersConfig)
+    return response
+}
+
+export const AddAddress = (obj) => {
+    let response = axios.post("https://localhost:44318/api/Address/Add",obj,headersConfig)
+    return response
+}

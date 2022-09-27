@@ -102,7 +102,7 @@ function BookView(props) {
                     <h2 className="bknme">{props.selectBook.bookName}</h2>
                     <p className="athrname"> by {props.selectBook.authorName}</p>
                     <div className="rtng">
-                        <button className="rtngbtn" onChange={takeRating} id={rating1}>{rating1}</button>
+                        <button className="rtngbtn" onChange={takeRating} id={rating1}>{rating1}*</button>
                         <p className="qnty">({props.selectBook.bookCount})</p>
                     </div>
                     <div className="prcediv">
