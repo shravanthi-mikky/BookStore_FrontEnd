@@ -2,16 +2,16 @@ import React from 'react'
 import './OrderSummary.css'
 import Button from '@mui/material/Button';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { addToOrders } from '../../Services/dataServices';
 
 
 function OrderSummary(props) {
     const navigate = useNavigate();
-    const [OrderDetails, setOrderDetails] = React.useState({ UserId: 1, BookId: 1, AddressId: 1, Address: "", Price: "", BookQuantity: "" })
-    const takeDisPrice = (event) => {
-        setOrderDetails((prevState) => ({ ...prevState, Price: event.target.value }));
-        console.log(OrderDetails.Price)
-    }
+    const OrderDetails = { userId: Number(props.cartitems.userId), bookId: Number(props.cartitems.bookId), addressId: 1, price: Number(props.cartitems.discountPrice), quantity: Number(props.cartitems.quantity)/* ,orderDate:Date.now() */ }
+
     const OnClickOfCheckout = () => {
+        //create the api call in data service
+        addToOrders(OrderDetails).then((response)=>{console.log(response);}).catch((error)=>{console.log(error)})
         navigate('/OrderSucessFull')
     }
 
@@ -25,13 +25,13 @@ function OrderSummary(props) {
                     <img src={props.cartitems.bookImage} alt="" className='orderItem-image-img' />
                 </div>
                 <div className="orderData">
-                    <div className="cartItems-title" OSBookName={props.cartitems.bookName}> {/* BookName */}
+                    <div className="cartItems-title" /* osbookName={props.cartitems.bookName} */> 
                         {props.cartitems.bookName}
                     </div>
-                    <div className="cartItems-author"> {/* Author */}
+                    <div className="cartItems-author">
                         by {props.cartitems.authorName}
                     </div>
-                    <div className="cartItems-price" /* onChange={takeDisPrice} */>
+                    <div className="cartItems-price" >
                         Rs.{props.cartitems.discountPrice}
                     </div>
                 </div>

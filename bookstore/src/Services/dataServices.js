@@ -70,3 +70,17 @@ export const DeleteWishList1 = () => {
     let response = axios.delete("https://localhost:44318/WishList/DeleteWishList1",headersConfig)
     return response
 }
+
+//https://localhost:44318/api/Order/Add
+
+export const addToOrders = (obj) => {
+    let response = axios.post("https://localhost:44318/api/Order/Add",obj,headersConfig)
+    return response
+}
+
+//https://localhost:44318/Feedback/Add
+
+export const addFeedBack = (obj) => {
+    let response = axios.post("https://localhost:44318/Feedback/Add",obj,headersConfig)
+    return response
+}

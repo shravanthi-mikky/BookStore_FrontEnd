@@ -8,6 +8,7 @@
     /* justify-content: space-around; */
     /* font-family:'Times New Roman', Times, serif; */
     font: normal normal normal 14px/17px Lato;
+    padding: 1rem;
 }
 
 .orderSummery-text{
@@ -36,7 +37,7 @@
 
 .orderItem-image{
     /* border: 1px solid red; */
-    width: 30%;
+    width: 45%;
     height: 100%;
     position: relative;
 

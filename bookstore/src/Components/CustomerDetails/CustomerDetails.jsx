@@ -2,6 +2,11 @@ import React from 'react'
 import './CustomerDetails.css'
 
 function CustomerDetails() {
+    const obj = { name : "Shravanthi",mobileNumber:1234567890}
+    
+    const AddAddressMethod =() => {
+        
+    }
     return (
         <div className='CustDetailsMainDiv'>
             <div className='custSecond'>
@@ -13,16 +18,15 @@ function CustomerDetails() {
                     <div className='fullnameMobileOfCust'>
                         <div className='fullnamediv'>
                             <label className='LabelfnameOfCust'>Full Name</label>
-                            <input className='inputfnameOfCust' placeholder='Enter your Name' />
+                            <input className='inputfnameOfCust' placeholder='Enter your Name' /* Value={obj.name} *//>
                         </div>
                         <div className='mobilediv'>
                             <label className='LabelMobileOfCust'>Mobile Number</label>
-                            <input className='inputMobileCust' placeholder='Enter your Number' />
+                            <input className='inputMobileCust' placeholder='Enter your Number' /* value={obj.mobileNumber} */ />
                         </div>
                     </div>
                     <div className='addressOfCust'>
                         <label className='LabelMobileOfCust'>Address</label>
-                        {/* <input className='addressTextCust' placeholder='Address' /> */}
                         <textarea className='addressTextCust'></textarea>
 
                     </div>
@@ -42,15 +46,15 @@ function CustomerDetails() {
                         </div>
                         <div className='ChooseRadioPart'>
                             <div className='radioPart'>
-                                <input type="radio" className='' name="locatn" value="" />
+                                <input type="radio" className='' name="locatn" value="1" />
                                 <label >Home</label>
                             </div>
                             <div className='radioPart'>
-                                <input type="radio" className='' name="locatn" value="" />
+                                <input type="radio" className='' name="locatn" value="2" />
                                 <label >Work</label>
                             </div>
                             <div className='radioPart'> 
-                                <input type="radio" className='' name="locatn" value="" />
+                                <input type="radio" className='' name="locatn" value="3" />
                                 <label >others</label>
                             </div>
                         </div>
@@ -59,7 +63,7 @@ function CustomerDetails() {
                     </div>
                 </div>
                 <div className='BottomOfCust'>
-                    <button className='buttonContinues'>Continue</button>
+                    <button className='buttonContinues' onClick={AddAddressMethod}>Continue</button>
                 </div>
 
             </div>

@@ -49,14 +49,14 @@ function Home(props) {
 
     return (
         <div>
-            <Header />
+            <Header/>
             <div className='BooksHeading'>
                 <h3>Books </h3><p className='TenItems'>(9 Items)</p>
             </div>
-            <div className='bookArray' /* onClick={OnBookView} */>
+            <div className='bookArray' /*onClick={OnBookView} */>
                 {view ? booksArray : <BookView selectBook={selectBook} />}
             </div>
-            <Footer />
+            <Footer/>
         </div>
     )
 }

@@ -22,7 +22,6 @@ function Cart() {
                 console.log(response)
                 setAddCart(response.data.response)
                 console.log("CartItems from Set Cart", addCart)
-                console.log(response.data.response.cartId)
             })
             .catch((error) => {
                 console.log(error)

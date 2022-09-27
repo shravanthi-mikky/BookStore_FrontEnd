@@ -38,7 +38,7 @@ function GetCartPage(props) {
                     <div className="aincrement">
                         <div className="aminus" onClick={decrementCounter}>-</div>
                         <div className="aitemss">{quantity} {/* {props.item.quantity} */}</div>
-                        <div className="aplus" /* id={props.item.booId} */ onClick={incrementCounter}>+</div>
+                        <div className="aplus" onClick={incrementCounter}>+</div>
                         <button className="aremove" /* id={props.item.booId} onClick={remove} */>Remove</button>
                     </div>
                     {/*   } */}
