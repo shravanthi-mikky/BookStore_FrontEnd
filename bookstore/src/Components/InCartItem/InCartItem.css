@@ -12,7 +12,7 @@
     height: 100%;
 }
 
-.aboutbookrow {
+.aboutCartrow {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -21,44 +21,49 @@
 
 }
 
-.aboutbook {
+.aboutCart {
     display: flex;
     flex-direction: column;
     margin-left: 15px;
     /* border: 1px solid green; */
 }
 
-.abookname {
+.aCartname {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     width: 150px;
     height: 25px;
     font: normal normal normal 16px/17px Lato;
-    letter-spacing: 0px;
     color: #0A0102;
-    margin-bottom: 0px;
 }
 
-.abkauthor {
+.abkauthorCart {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     width: 100px;
     height: 20px;
     font: normal normal normal 14px/12px Lato;
-    letter-spacing: 0px;
     color: #9D9D9D;
     margin-bottom: 0px;
 }
 
-.abookprice {
+.abookpriceCart {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    font-size: small;
 }
 
-.aincrement {
+.discountpriceCart{
+    text-decoration: line-through;
+    margin-left: 5px;
+    margin-top: 4px;
+    
+}
+
+.aincrementCart {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -66,7 +71,7 @@
 }
 
 
-.aminus {
+.aminusCart {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -81,7 +86,7 @@
     /* align-items: center; */
 }
 
-.aitemss {
+.aitemssCart {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -91,21 +96,6 @@
     border: 1px solid #DBDBDB;
     border-radius: 1px;
     margin-left: 5px;
-}
-
-.aplus {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    background: #FAFAFA 0% 0% no-repeat padding-box;
-    border: 1px solid #DBDBDB;
-    border-radius: 100%;
-    align-items: center;
-    /* padding-left: 7px; */
-    margin-left: 5px;
-
 }
 
 .aremove {
@@ -124,7 +114,7 @@
     background: transparent;
 }
 
-.aplaceorder {
+.aplaceorderCart {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -136,14 +126,14 @@
     margin-bottom: 20px;
 }
 
-.plceorder {
+.plceorderCart {
     background-color: #3371B5;
     border: none;
     outline: none;
     color: #FFFFFF;
 
 }
-.PlaceOrder {
+.PlaceOrderCart {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -159,11 +149,9 @@
     /* margin-top:8rem; */
 
 }
-.PlaceOrderDiv{
+.PlaceOrderDivCart{
     display:flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: flex-end;
-   /*  border:1px solid red; */
     margin-left:15rem;
 }

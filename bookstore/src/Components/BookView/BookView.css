@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    /* width:90vw;
+    height:90vh; */
 
 }
 
@@ -284,6 +286,9 @@ hr {
     height: 100px;
     margin-top: 15px;
 }
+
+
+
 .stars {
     display: flex;
     flex-direction: row;
@@ -306,3 +311,4 @@ hr {
     align-items: center;
     color: #FFFFFF;
 }
+

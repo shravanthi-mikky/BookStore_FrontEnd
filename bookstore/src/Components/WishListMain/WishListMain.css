@@ -1,0 +1,31 @@
+
+
+
+.firstSection-wishlist{
+    height: 8%;
+    width: 70%;
+    position: relative;
+    left: 180px;
+    display: flex;
+    align-items: center;
+}
+
+.firstSection-wishlist-child{
+    position: relative;
+    left: 23px;
+}
+.MyWishlist-Bold{
+    font-weight: 300;
+}
+
+.secondSection-myWishlist{
+    height: 10%;
+    width: 96%;
+    display: flex;
+    font-size: large;
+    font-weight: 600;
+    position: relative;
+    margin-left:14rem;
+    margin-bottom:1.5rem;
+    
+}

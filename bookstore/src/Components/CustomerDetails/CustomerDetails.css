@@ -1,0 +1,90 @@
+.CustDetailsMainDiv{
+
+    display:flex;
+    height:90vh;
+    width: 774px;
+    color:rgb(44, 39, 39);
+   /*  justify-content: center; */
+    /* align-items:center; */
+}
+
+.headingOfCust{
+color:black;
+}
+.custSecond{
+    border:1px solid rgb(172, 169, 169);
+    display:flex;
+    flex-direction: column;
+    height:500px;
+    width:700px;
+    border-radius:1px;
+    padding:1.5rem 2.5rem;
+    /* background-color: rgb(243, 243, 243); */
+
+}
+.headingOfCust{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.inputfnameOfCust{
+    height:1.8rem;
+    width:13.5rem;
+}
+
+.inputMobileCust{
+    height:1.8rem;
+    width:13.5rem;
+}
+.fullnamediv,.mobilediv{
+    display:flex;
+    flex-direction: column;
+}
+.fullnameMobileOfCust{
+    display:flex;
+    flex-direction: row;
+    /* border:1px solid red; */
+    /* padding:1rem; */
+    display:flex;
+    height:100px;
+    width:500px;
+    justify-content: space-between;
+    align-items: center;
+}
+.addressOfCust{
+    display:flex;
+    flex-direction: column;
+}
+.addressTextCust{
+    height:70px;
+    width:500px;
+}
+.ChooseRadioPart{
+    height:50px;
+    width:500px;
+    /* border:1px solid red; */
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.radioPart{
+    width:100px;
+    /* border:1px solid red; */
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.BottomOfCust{
+    display:flex;
+    justify-content: flex-end;
+}
+.buttonContinues{
+    background-color: #3371B5;
+    border:none;
+    height:1.8rem;
+    width:4.5rem;
+    border-radius: 5px;
+    color:white;
+}

@@ -14,8 +14,8 @@ function Home(props) {
     const [book, setBooks] = React.useState([])
     const [bookForView, setBookForView] = React.useState([])
 
-    const [view,setView] = React.useState(true)
-    const [selectBook,setSelectBook] = React.useState("")
+    const [view, setView] = React.useState(true)
+    const [selectBook, setSelectBook] = React.useState("")
 
     /* const ListenToBookList = (data) => {
         setBooks(data);
@@ -23,9 +23,9 @@ function Home(props) {
 
     const ListenToBookList = () => {
         setView(false)
-    } 
+    }
 
-    const ListenToEachBook = (data) =>{
+    const ListenToEachBook = (data) => {
         setSelectBook(data)
     }
     const booksArray = book.map((books) => (
@@ -49,12 +49,14 @@ function Home(props) {
 
     return (
         <div>
-            <Header />
-            <div className='bookArray' /* onClick={OnBookView} */>
-                {view ? booksArray : <BookView selectBook={selectBook}/>}
-                
+            <Header/>
+            <div className='BooksHeading'>
+                <h3>Books </h3><p className='TenItems'>(9 Items)</p>
             </div>
-            <Footer />
+            <div className='bookArray' /*onClick={OnBookView} */>
+                {view ? booksArray : <BookView selectBook={selectBook} />}
+            </div>
+            <Footer/>
         </div>
     )
 }

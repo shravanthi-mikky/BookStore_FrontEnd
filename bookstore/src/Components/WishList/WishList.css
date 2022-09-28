@@ -1,0 +1,104 @@
+.wishlistContainer {
+    /* width: 100vw;
+    height: 100vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+.wishlist-header {
+    width: 100%;
+}
+
+.secondSection-wishlist {
+    height: 80%;
+    width: 70%;
+    position: relative;
+    left: 180px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.secondSection-displayMyWishlist {
+    border: 1px solid rgb(169, 163, 163);
+    /* height: 30%; */
+    min-height: 30%;
+    max-height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wishlistBookData {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+.wishListBookData-Image {
+    width: 35%;
+    height: 50%;
+    position: relative;
+    left: 20px;
+}
+
+.wishlist-bookImage {
+    width: 100%;
+    height: 100%;
+}
+
+.wishlistBook-title {
+    font-size: large;
+    font-weight: 700;
+}
+
+.wishlistBook-author {
+    font-size: small;
+    /* font-weight: 700; */
+}
+
+.wishlistBook-price {
+    font-size: large;
+    font-weight: 700;
+}
+
+.wishlistBookData-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.wishlistBookData-text1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    right: 50px;
+}
+
+.wishlistBookDeleteIcon {
+    /* border: 1px solid ; */
+    position: relative;
+    right: 20px;
+    top: 20px
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .wishlistContainer {
+        width: 250vw;
+        margin: auto;
+        margin-top: 300px;
+        
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:860px) {
+    .wishlistContainer {
+        width: 150vw;
+        /* height: 35vh; */
+    }
+}

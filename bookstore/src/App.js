@@ -13,6 +13,13 @@ import RouterComponent from './Router/Router';
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 import BookView from './Components/BookView/BookView';
 import ResetPassword from './Pages/ResetPassword/ResetPassword';
+import CustomerDetails from './Components/CustomerDetails/CustomerDetails';
+import OrderSummary from './Components/OrderSummary/OrderSummary';
+import GetCartPage from './Components/GetCartPage/GetCartPage';
+import WishList from './Components/WishList/WishList';
+import InCartItem from './Components/InCartItem/InCartItem';
+import OrderSucessFull from './Components/OrderSucessful/OrderSucessFull';
+import WishListMain from './Components/WishListMain/WishListMain';
 
 function App() {
   return (
@@ -20,7 +27,7 @@ function App() {
       {/* <Login/> */}
      {/*  <SignUp/> */}
      {/* <DashBoard/> */}
-    {/*  <Header/> */}
+     {/* <Header/> */}
       {/* <Footer/> */}
       {/* <Home/> */}
       {/* <Book/> */}
@@ -29,6 +36,13 @@ function App() {
       {/* <ForgotPassword/> */}
      {/*  <BookView/> */}
       {/* <ResetPassword/> */}
+      {/* <CustomerDetails/> */}
+      {/* <OrderSummary/> */}
+      {/* <GetCartPage/> */}
+      {/* <WishList/> */}
+      {/* <InCartItem/> */}
+      {/* <OrderSucessFull/> */}
+      {/* <WishListMain/> */}
     </div>
   );
 }
