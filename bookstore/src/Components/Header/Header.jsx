@@ -33,7 +33,16 @@ function Header() {
                 <div className="HomePageProfileAndCartIcon">
                     <div className='pAndC'>
                         <PersonOutlineOutlinedIcon style={{ color: "white" }} />
+                        <div class='dropdown'>
                         <p style={{ color: "white", fontSize:"small" }}>Profile</p>
+                        <div className='dropdownContent'>
+                            
+                            <a href="/">Logout</a>
+                            <a href="/WishListMain">WishList</a>
+                            <a href="/Cart">Cart</a>
+                        </div>
+                        </div>
+
                     </div>
                     <div className='pAndC'>
                         <img className='cartImage' src='CartImage.png' width='20' />

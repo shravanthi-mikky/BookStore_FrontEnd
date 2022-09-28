@@ -5,7 +5,7 @@ import './CustomerDetails.css'
 function CustomerDetails() {
     const obj = { name: "Shravanthi", mobileNumber: 1234567890 }
 
-    const [addressObj, setAddressObj] = React.useState({ fullName: "", mobile: 12345, address: "", city: '', state: "" });
+    const [addressObj, setAddressObj] = React.useState({ fullName: "", mobile: Number(), address: "", city: '', state: "" });
 
     const addAddress = {
         address: addressObj.address,
@@ -36,6 +36,7 @@ function CustomerDetails() {
             .then(
                 (response) => {
                     console.log(response);
+                    alert("Address details added!")
                 })
             .catch(
                 (error) => {

@@ -9,7 +9,7 @@ import { addFeedBack, addtoCart, addtoWishList } from '../../Services/dataServic
 function BookView(props) {
 
     const [rating1, setRating1] = React.useState(Number(props.selectBook.rating))
-    const [feedbackObj,setFeedbackObj] = React.useState({userId:1 ,bookId:Number(props.selectBook.bookId) , comments:"", ratings:Number(props.selectBook.rating) })
+    const [feedbackObj,setFeedbackObj] = React.useState({userId:1 ,bookId:Number(props.selectBook.bookId) , comments:"", ratings:rating1 })
 
     const takeComment = (event) => {
         setFeedbackObj((prevState) => ({ ...prevState, comments: event.target.value }));
@@ -102,7 +102,7 @@ function BookView(props) {
                     <h2 className="bknme">{props.selectBook.bookName}</h2>
                     <p className="athrname"> by {props.selectBook.authorName}</p>
                     <div className="rtng">
-                        <button className="rtngbtn" onChange={takeRating} id={rating1}>{rating1}*</button>
+                        <button className="rtngbtn" /* onChange={takeRating} */ id={rating1}>{rating1}*</button>
                         <p className="qnty">({props.selectBook.bookCount})</p>
                     </div>
                     <div className="prcediv">
