@@ -1,9 +1,15 @@
 import React from 'react'
+import { DeleteCart } from '../../Services/dataServices'
 import GetCartPage from '../GetCartPage/GetCartPage'
 import './InCartItem.css'
 
 function InCartItem(props) {
     const [quantity, setQuantity] = React.useState(/* props.cart.Book_Quantity */)
+    const deleteObj = { cartId:Number(props.cartitems.cartId)}
+
+    const ListenToDeleteCart = () => {
+        DeleteCart(deleteObj).then((response)=> {console.log(response);alert("cart Item is deleted!");}).catch((error)=>{console.log(error);alert("Unable to delete Cart Item!")})
+    }
   return (
     <div>
             <div className="aboutCartrow">
@@ -21,7 +27,7 @@ function InCartItem(props) {
                     {/* {!props.switchordersum && */}
                     <div className="aincrementCart">
                         <div className="aitemssCart">{/* {quantity} */} {props.cartitems.quantity}</div>
-                        <button className="aremoveCart">Remove</button>
+                        <button className="aremoveCart" onClick={ListenToDeleteCart}>Remove</button>
                     </div>
                     {/*   } */}
 

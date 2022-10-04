@@ -10,16 +10,11 @@ import './Home.css'
 
 function Home(props) {
 
-    const navigate2 = useNavigate();
     const [book, setBooks] = React.useState([])
-    const [bookForView, setBookForView] = React.useState([])
+    const [searchBook, setSearchBook] = React.useState('')
 
     const [view, setView] = React.useState(true)
     const [selectBook, setSelectBook] = React.useState("")
-
-    /* const ListenToBookList = (data) => {
-        setBooks(data);
-    } */
 
     const ListenToBookList = () => {
         setView(false)
@@ -32,31 +27,47 @@ function Home(props) {
         <Book book={books} ListenToBookList={ListenToBookList} ListenToEachBook={ListenToEachBook} />
     ))
 
-    /* const OnBookView = (bookForView) => {
-        bookForView.bookId = 1;
-        getBookbyid(bookForView).then((response) => { console.log(response);  navigate2('/BookView')  }).catch((error) => { console.log(error) })
-    } */
-
-    const getBooks = () => {
-        getAllBooks().then(response => {
-            console.log(response); setBooks(response.data.response);
-        }).catch((error) => (console.log(error)))
-    }
+    /*  const getBooks = () => {
+         getAllBooks().then(response => {
+             console.log(response); setBooks(response.data.response);
+         }).catch((error) => (console.log(error)))
+     } */
 
     React.useEffect(() => {
-        getBooks()
-    }, [])
+        displayBooks();
+    }, [searchBook])
+
+    const displayBooks = () => {
+
+        getAllBooks().then((response) => {
+            console.log(response);
+            if (searchBook) {
+                let filterbooks = response.data.response.filter(books => books.bookName.toLowerCase().includes(searchBook.toLowerCase()))
+                setBooks(filterbooks)
+            }
+            else {
+                setBooks(response.data.response)
+
+            }
+        }).catch((error) => {
+            console.log(error);
+        })
+
+    }
+    const showSearchedBooks = (string) => {
+        setSearchBook(string)
+    }
 
     return (
         <div>
-            <Header/>
+            <Header showSearchedBooks={showSearchedBooks} />
             <div className='BooksHeading'>
                 <h3>Books </h3><p className='TenItems'>(9 Items)</p>
             </div>
-            <div className='bookArray' /*onClick={OnBookView} */>
+            <div className='bookArray'>
                 {view ? booksArray : <BookView selectBook={selectBook} />}
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

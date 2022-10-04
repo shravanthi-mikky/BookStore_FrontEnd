@@ -23,8 +23,6 @@ function WishListMain() {
         getAllWishListItems()
     }, [])
 
-    /*     const WishArray = showWishList.map((items)=>{<WishList items={items}/>})
-     */
     const WishArray = showWishList.map((item) =>
         (<WishList item={item} />))
 
@@ -35,10 +33,10 @@ function WishListMain() {
                 Home / <span className="MyWishlist-Bold">(My Wishlist)</span>
             </div>
 
-           <div className="WishListArray"> 
-           <div className="secondSection-myWishlist">My Wishlist</div>
-           {WishArray}
-           </div>
+            <div className="WishListArray">
+                <div className="secondSection-myWishlist">My Wishlist</div>
+                {WishArray}
+            </div>
         </div>
     )
 }

@@ -2,14 +2,15 @@ import React from 'react'
 import Header from '../Header/Header'
 import './WishList.css'
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import { DeleteWishList, DeleteWishList1 } from '../../Services/dataServices';
+import { DeleteWishList1 } from '../../Services/dataServices';
 
 
 function WishList(props) {
-  const [DeleteObj, setDeleteObj] = React.useState({ wishListId: 1, userId: 1 })
+  const DeleteObj = { wishListId: Number(props.item.wishListId)}
 
   const OnClickDelete = () => {
-    DeleteWishList1().then((response) => { console.log(response) }).catch((error) => { console.log(error) })
+    console.log(DeleteObj);
+    DeleteWishList1(DeleteObj).then((response) => { console.log(response);alert("WishList is Deleted!"); }).catch((error) => { console.log(error) })
   }
   return (
     <div className="wishlistContainer">

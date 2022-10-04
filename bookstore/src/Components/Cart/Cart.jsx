@@ -69,8 +69,6 @@ function Cart() {
                         <InCartItem cartitems={cartitems}/>
                         
                     }
-
-                    {/* {CartArray} */}
                     
                 </div>
 
