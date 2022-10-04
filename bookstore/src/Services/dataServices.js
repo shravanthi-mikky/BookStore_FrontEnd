@@ -11,9 +11,6 @@ export const Forgot = (obj) => {
     return response
 }
 
-//https://localhost:44318/api/User/Reset?email=xyz%40gmail.com&newpassword=abc&confirmpassword=pqr
-
-
 
 export const Reset = (obj) => {
     let response = axios.post(`https://localhost:44318/api/User/Reset?email=${obj.email}&newpassword=${obj.newpassword}&confirmpassword=${obj.confirmpassword}`,obj,headersConfig)
@@ -58,16 +55,8 @@ export const getAllWishList = () => {
     return response
 }
 
-//not used
-export const DeleteWishList = (obj) => {
-    /* console.log(headersConfig) */
-    let response = axios.delete(`https://localhost:44318/WishList/DeleteWishList?WishListId=${obj.wishListId}&UserId=${obj.userId}`,obj,headersConfig)
-    return response
-}
-
-export const DeleteWishList1 = () => {
-    /* console.log(headersConfig) */
-    let response = axios.delete("https://localhost:44318/WishList/DeleteWishList1",headersConfig)
+export const DeleteWishList1 = (obj) => {
+    let response = axios.post("https://localhost:44318/WishList/DeleteWishList",obj,headersConfig)
     return response
 }
 
@@ -92,5 +81,12 @@ export const getAddress = () => {
 
 export const AddAddress = (obj) => {
     let response = axios.post("https://localhost:44318/api/Address/Add",obj,headersConfig)
+    return response
+}
+
+//https://localhost:44318/api/Cart/Delete
+
+export const DeleteCart = (obj) => {
+    let response = axios.post("https://localhost:44318/api/Cart/Delete",obj,headersConfig)
     return response
 }

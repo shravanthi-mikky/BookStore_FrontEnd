@@ -1,9 +1,12 @@
 import React from 'react'
-import { getCart } from '../../Services/dataServices'
+import { DeleteCart, getCart } from '../../Services/dataServices'
 import './GetCartPage.css'
 
 function GetCartPage(props) {
     const [quantity, setQuantity] = React.useState(props.item.quantity)
+    const deleteObj = { cartId:Number(props.item.cartId)}
+
+
     const showSingleCartItem = (data) => {
         console.log("singleCartItem", data)
         props.ListenToCartList()
@@ -17,8 +20,11 @@ function GetCartPage(props) {
 
       const decrementCounter = () => {
         setQuantity(quantity - 1)
-
       }
+
+    const remove = () => {
+        DeleteCart(deleteObj).then((response)=> {console.log(response);alert("cart Item is deleted!");}).catch((error)=>{console.log(error);alert("Unable to delete Cart Item!")})
+    }
 
     return (
         <div>
@@ -39,7 +45,7 @@ function GetCartPage(props) {
                         <div className="aminus" onClick={decrementCounter}>-</div>
                         <div className="aitemss">{quantity} {/* {props.item.quantity} */}</div>
                         <div className="aplus" onClick={incrementCounter}>+</div>
-                        <button className="aremove" /* id={props.item.booId} onClick={remove} */>Remove</button>
+                        <button className="aremove" /* id={props.item.booId}*/ onClick={remove}>Remove</button>
                     </div>
                     {/*   } */}
 

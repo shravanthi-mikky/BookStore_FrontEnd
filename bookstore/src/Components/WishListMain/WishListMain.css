@@ -1,6 +1,4 @@
 
-
-
 .firstSection-wishlist{
     height: 8%;
     width: 70%;
@@ -11,21 +9,32 @@
 }
 
 .firstSection-wishlist-child{
-    position: relative;
-    left: 23px;
+    /* position: relative; */
+    /* left: 23px; */
+    width:80vw;
+    margin-left: 14vw;
 }
 .MyWishlist-Bold{
     font-weight: 300;
 }
 
 .secondSection-myWishlist{
-    height: 10%;
-    width: 96%;
+   /*  height: 10%;
+    width: 96%; */
     display: flex;
     font-size: large;
     font-weight: 600;
     position: relative;
-    margin-left:14rem;
-    margin-bottom:1.5rem;
+    border:1px solid rgb(174, 173, 173);
+    width:70vw;
+    height:7vh;
+    margin-left: 14vw;
+    padding-left:2.15rem;
+    margin-top:2rem;background-color: rgb(204, 204, 204);
+    align-items: center;
     
+}
+
+.WishListArray{
+    border:0px solid rgb(174, 173, 173);
 }
