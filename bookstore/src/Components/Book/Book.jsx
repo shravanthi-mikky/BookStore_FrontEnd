@@ -20,7 +20,7 @@ function Book(props) {
                     <p className="byauthor">by {props.book.authorName}</p>
                     <div className="rating">
                         <button className="ratingbtn">{props.book.rating}*</button>
-                        <p className="quantity">({props.book.bookCount})</p>
+                        <p className="quantity">({props.book.totalRating})</p>
                     </div>
                     <div className="pricediv">
                         <h2 className="price">Rs.{props.book.discountPrice}</h2>
